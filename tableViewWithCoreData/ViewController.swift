@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     
     let persistenceManager: PersistenceManager
+    var people = [Person]()
     
     init(persistenceManager: PersistenceManager ){//Dependecy Injection
         self.persistenceManager = persistenceManager
@@ -26,6 +27,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createPerson()
+    }
+    
+    func printPeople(){
+        people.forEach({print($0.name)})
     }
     
    //Create CoreData object
@@ -44,7 +49,24 @@ class ViewController: UIViewController {
 //        guard let people = try! persistenceManager.context.fetch(Person.fetchRequest()) as? [Person] else { return }
         
         let people = persistenceManager.fetch(Person.self)
-        people.forEach({print($0.name)})
+        self.people = people
+        printPeople()
+        
+        let deadLine = DispatchTime.now() + .seconds(5)
+        DispatchQueue.main.asyncAfter(deadline: deadLine, execute: updatePerson)
+    }
+    
+    func updatePerson(){
+        let firstPerson = people.first!
+        firstPerson.name += "Pedro"
+        persistenceManager.saveContext()
+    }
+    
+    func deletePerson(){
+        let firstPerson = people.first!
+        persistenceManager.context.delete(firstPerson)
+        persistenceManager.saveContext()
+        printPeople()
     }
 
 
