@@ -13,6 +13,9 @@
 		F9AF71F122775A4800D0BACC /* tableViewWithCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9AF71EF22775A4800D0BACC /* tableViewWithCoreData.xcdatamodeld */; };
 		F9AF71F322775A4B00D0BACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9AF71F222775A4B00D0BACC /* Assets.xcassets */; };
 		F9AF71F622775A4B00D0BACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9AF71F422775A4B00D0BACC /* LaunchScreen.storyboard */; };
+		F9AF71FF22775F9700D0BACC /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF71FD22775F9700D0BACC /* Person+CoreDataClass.swift */; };
+		F9AF720022775F9700D0BACC /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF71FE22775F9700D0BACC /* Person+CoreDataProperties.swift */; };
+		F9AF72042277640600D0BACC /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF72032277640600D0BACC /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F9AF71F222775A4B00D0BACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9AF71F522775A4B00D0BACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9AF71F722775A4B00D0BACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9AF71FD22775F9700D0BACC /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9AF71FE22775F9700D0BACC /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9AF72032277640600D0BACC /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		F9AF71E722775A4800D0BACC /* tableViewWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F9AF71FD22775F9700D0BACC /* Person+CoreDataClass.swift */,
+				F9AF71FE22775F9700D0BACC /* Person+CoreDataProperties.swift */,
+				F9AF72032277640600D0BACC /* PersistenceManager.swift */,
 				F9AF71E822775A4800D0BACC /* AppDelegate.swift */,
 				F9AF71EA22775A4800D0BACC /* ViewController.swift */,
 				F9AF71EC22775A4800D0BACC /* Main.storyboard */,
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9AF71FF22775F9700D0BACC /* Person+CoreDataClass.swift in Sources */,
+				F9AF720022775F9700D0BACC /* Person+CoreDataProperties.swift in Sources */,
 				F9AF71EB22775A4800D0BACC /* ViewController.swift in Sources */,
+				F9AF72042277640600D0BACC /* PersistenceManager.swift in Sources */,
 				F9AF71E922775A4800D0BACC /* AppDelegate.swift in Sources */,
 				F9AF71F122775A4800D0BACC /* tableViewWithCoreData.xcdatamodeld in Sources */,
 			);
