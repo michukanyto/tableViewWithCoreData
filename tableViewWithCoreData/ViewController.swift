@@ -41,7 +41,9 @@ class ViewController: UIViewController {
     }
     
     func getPeople(){
-        guard let people = try! persistenceManager.context.fetch(Person.fetchRequest()) as? [Person] else { return }
+//        guard let people = try! persistenceManager.context.fetch(Person.fetchRequest()) as? [Person] else { return }
+        
+        let people = persistenceManager.fetch(Person.self)
         people.forEach({print($0.name)})
     }
 
